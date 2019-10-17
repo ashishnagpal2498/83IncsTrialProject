@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,7 @@
     <script src="Bootstrap/dist/js/jquery-3.2.1.js">
     </script>
     <script src="Bootstrap/dist/js/bootstrap.js"></script>
-    <script src="https://kit.fontawesome.com/a48163d91f.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/a48163d91f.js" crossorigin="anonymous"></script>
 <style>
     .search-bar-div{
         width: 200px;
@@ -56,8 +56,8 @@
         color: lightgreen;
     }
     .red-unchecked{
-    border-color: indianred;
-        color: indianred;
+    border-color: #f58a75;
+        color: #f58a75;
         font-size: 13px;
     }
     .nav-bar-setts{
@@ -78,6 +78,7 @@
         object-fit: cover;
     }
     .data-row-setts{
+        position: relative;
         padding: 13px 0;
     }
     .data-row-setts:hover{
@@ -86,7 +87,32 @@
         box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
         transform: scale(1.01,1.01);
     }
+    .dropdown-menu{
+        position: absolute;
+        top: 10px;
+
+        width: 200px;
+        box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+        z-index: 2;
+        display: none;
+    }
+    .dropdown-list{
+        list-style-type: none;
+        margin-left: 0;
+        padding: 5px;
+    }
+    .dropdown-list li{
+
+
+    }
+    .display-menu{
+        display: block;
+    }
+    .star-color{
+        color: gray;
+    }
 </style>
+</head>
 <body>
 <div class="container-fluid">
     <div class="row">
@@ -109,11 +135,11 @@
                             <div class="search-bar-div">
                                 <i class="fa fa-search"></i>
                                 <input type="text" placeholder="SEARCH" class="input-box-search">
-                                <a href="#"> <i class="fa fa-arrow-down"></i> </a>
+                                <a href="#"> <i class="fas fa-sort-down"></i> </a>
                             </div>
                         </div>
                         <div class="nav-item btn btn-dark"><i class="fas fa-cog"></i> </div>
-                        <div class="nav-item btn btn-danger"><i class="fa fa-plus"></i><i class="fa fa-arrow-down" style="border-left: 1px solid white;padding-left: 3px"></i> </div>
+                        <div class="nav-item btn btn-danger"><i class="fa fa-plus"></i> <i class="fas fa-sort-down" style="border-left: 1px solid white;padding-left: 3px"></i> </div>
                     </div>
                     </div>
                 </div>
@@ -180,25 +206,64 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star btn-primary"></i>
-                                <i class="fas fa-star btn-primary"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
                             </div>
-                            <div class="col-3">
+                            <div class="col-3 row">
 <!--                                Views Up-->
+                                <div class="col-6"><h6>198K</h6></div>
+                                <div class="col-6 green-checked"></div>
                             </div>
                             <div class="col-3">
 <!--                                Views Down-->
+                                640
                             </div>
                             <div class="col-3" align="right">
-                                <i class="fas fa-ellipsis-h"></i>
+                                <i onclick="displayMenu()" class="fas fa-ellipsis-h"></i>
                             </div>
                         </div>
+                        <div class="col-12 row" style="font-size: 12px">
+                            <div class="col-3">
+                                <!--                                Stars-->
+                               101 Reviews
+                            </div>
+                            <div class="col-3 row">
+                                <!--                                Views Up-->
+                                Total Views
+
+                            </div>
+                            <div class="col-3">
+                                <!--                                Views Down-->
+                                Total Action
+                            </div>
+                            <div class="col-3" align="right">
+                            </div>
                     </div>
                 </div>
+<!--                    Dropdown menu-->
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <ul class="dropdown-list">
+                            <li>Photos/Videos</li>
+                            <li>Products</li>
+                            <li>Services</li>
+                            <li>Coupons</li>
+                            <li>User Review</li>
+                        </ul>
+                    </div>
                 </div>
+<!--                    EnD of Row-->
             </div>
         </div>
     </div>
 </div>
+</div>
+<script>
+    function displayMenu(){
+        let dropdownMenu = document.getElementById('dropdown-menu');
+      dropdownMenu.classList.toggle('display-menu')
+    }
+
+
+</script>
 </body>
 </html>
