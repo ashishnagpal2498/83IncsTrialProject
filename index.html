@@ -9,13 +9,14 @@
     <script src="Bootstrap/dist/js/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/a48163d91f.js" crossorigin="anonymous"></script>
     <link href="headings_and_sideMenu.css" rel="stylesheet">
+    <link href="list-settings.css" rel="stylesheet">
 <style>
     .search-bar-div{
-        width: 200px;
-        padding: 5px;
-        border-radius: 10px;
+        width: 230px;
+        padding: 3px;
+        border-radius: 15px;
         border: 1px solid rgba(0,0,0,0.2);
-        background-color: #efefef;
+        background-color: #f2f2f5;
     }
     .search-bar-div a{
         color: black;
@@ -26,7 +27,7 @@
         background-color: transparent;
         border: none;
         outline: none;
-        width: 140px;
+        width: 170px;
         display: inline-block;
     }
     .special-nav{
@@ -98,7 +99,7 @@
         box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
         transform: scale(1.01,1.01);
     }
-    .dropdown-menu{
+    .mydropdown-menu{
         position: absolute;
         top: 30px;
         right: 0;
@@ -123,16 +124,6 @@
     .star-color{
         color: gray;
     }
-    .side-menu-list{
-        list-style-type: none;
-        margin-top: 10px;
-        margin-left: 0;
-        height: auto;
-    }
-    .side-menu-list li{
-        padding: 15px 0;
-        font-size: 20px;
-    }
     .menu-icon{
         margin: 0 15px 0 2px;
     }
@@ -140,13 +131,8 @@
         height: 500px;
         list-style-type: none;
     }
-    .top-new-list{
-        height: 60px;
-        list-style-type: none;
-    }
-
     .top-menu-list li{
-        padding: 5px;
+        padding: 8px 5px;
         font-size: 13px;
     }
     .top-new-list li{
@@ -181,18 +167,8 @@
         object-fit: cover;
         margin-left: -10px;
     }
-    .side-menu-special-list{
-        margin-top: 27px;
-        flex: 0 0 83%;
-        max-width: 83%;
-    }
-    .side-menu-heading{
-        font-size: 13px;
-        padding-left: 0;
-    }
-    .data-main-icons{
-      position: relative;
-        top: -2px;
+    .border-class{
+        border-bottom: 1px solid #a9aaaf;color: #a9aaaf;
     }
 </style>
 </head>
@@ -200,10 +176,10 @@
 <div class="container-fluid" style="background-color: #f7f7fa">
     <div class="row">
 <!--        Side menu-->
-        <div class="col-3 row side-menu pr-0">
+        <div class="col-12 col-md-6 col-lg-3 row side-menu pr-0">
 <!--                Side ICONS List With Logo-->
-                <div class="col-3 p-0">
-                    <div id="main-logo" class="p-0"><img src="logo.png" width="85%" height="85%"></div>
+                <div class="col-3 p-0" id="side-menu-div">
+                    <div id="main-logo" class="p-0" align="center"><img src="logo.png" width="85%" height="85%"></div>
 
                     <ul class="nav nav-tabs flex-column" role="tablist" id="sideMenuIconList">
 
@@ -238,10 +214,10 @@
                     </ul>
                 </div>
 
-            <div class="col-9 row p-0 pl-2 side-menu-special-list" style="font-size: 13px">
-                <h6 class="col-12">Site Manager</h6>
-                <div class="col-12 row pt-3 pr-0" >
-                    <div class="col-12 pb-2 side-menu-heading">
+            <div class="col-9 row p-0 pl-4 side-menu-special-list" style="font-size: 13px">
+                <h6 class="col-12 pl-1" style="font-weight: bold; margin-left: 2px">Site Manager</h6>
+                <div class="col-12 row pt-3 mt-2 pr-0" >
+                    <div class="col-12 pl-2 pb-2 side-menu-heading">
                         DIRECTORIES
                     </div>
                     <ul class="col-12 p-0 nav nav-tabs flex-column" role="tablist" id="side-menu-main-list" >
@@ -258,42 +234,55 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12 row pt-3">
-                    <div class="col-12 side-menu-heading">PAGES</div>
+                <div class="col-12 row pt-3 pl-2">
+                    <div class="col-12">PAGES</div>
                     <ul class="col-12 top-menu-list">
-                        <li><i class="far fa-sticky-note menu-icon"></i> Home</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> About Us</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> Advertise with Us</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> FAQ</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> Privacy</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> Terms Of Use</li>
-                        <li><i class="far fa-sticky-note menu-icon"></i> Contact</li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> Home</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> About Us</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> Advertise with Us</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> FAQ</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> Privacy</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> Terms Of Use</a></li>
+                        <li><a href=""> <i class="far fa-sticky-note menu-icon"></i> Contact</a></li>
 
 
                     </ul>
                 </div>
             </div>
+            <div class="notification-icon">
+                <div class="question-mark-icon">
+                    ?
+                </div>
+                <div class="user-noti-icon btn btn-dark">
+                    CK
+                    <div class="noti-bell">3</div>
+                </div>
+            </div>
         </div>
 <!--        Main container-->
-        <div class="col-9 main-menu pt-3 pl-5">
+        <div class="col-12 col-md-6 col-lg-9 pr-0 main-menu pt-3 pl-5">
 <!--            Upper Nav-->
             <div class="row">
                 <div class="col-12 row">
                     <div class="col-7 pt-2" style="align-content: center">
                         <h5 style="margin: 0"> Local Business </h5>
                     </div>
-                    <div class="col-5">
+                    <div class="col-5 p-0">
                         <div class="navbar">
                         <div class="nav-item">
 <!--                            Search Bar-->
                             <div class="search-bar-div">
-                                <i class="fa fa-search"></i>
-                                <input type="text" placeholder="SEARCH" class="input-box-search">
-                                <a href="#"> <i class="fas fa-sort-down"></i> </a>
+                                <i class="fa fa-search" style="color: #95969b;margin-left: 3px"></i>
+                                <input type="text" placeholder="Search" class="input-box-search">
+                                <a href="#"> <i class="fas fa-chevron-down" style="color:#95969b;font-size: 11px "></i> </a>
                             </div>
                         </div>
-                        <div class="nav-item btn btn-dark"><i class="fas fa-cog"></i> </div>
-                        <div class="nav-item btn btn-danger"><i class="fa fa-plus"></i> <i class="fas fa-sort-down" style="border-left: 1px solid white;padding-left: 3px"></i> </div>
+                        <div class="nav-item btn btn-dark" style="background-color: #e8e9ed;color: #565860;border: 0"><i class="fas fa-cog"></i> </div>
+                        <div class="nav-item btn" style=";width: 53px ;height: 38px;position: relative;background-color:#f0765f ">
+                            <a href="#" style="font-size: 14px;color: white;text-align: center;padding-top: 7px;position: absolute;height: 100%;width: 50%;top: 0; background-color: #f58a75;left: 0"><i class="fa fa-plus"></i></a>
+                            <a href="#" style="color: white;text-align: center;padding-top: 5px;position: absolute;height: 100%;width: 50%;top: 0;margin-left: 5px;right: 0"><i class="fas fa-chevron-down" style="padding-left: 3px;font-size: 11px"></i>
+                            </a>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -328,20 +317,20 @@
                             </div>
 
                         </div>
-                        <div class="col-4 row">
+                        <div class="col-4 row pt-1">
                             <div class="col-7">
 
-                                <p >
+                                <p style="padding-top:10px ;margin-bottom: 0;font-size: 18px;font-weight: bold">
                                     <i class="fas fa-exclamation-circle my-icons-setts" style="color: red"></i>     91
-                                    <br>
-                                    <span class="under-menu-heads" style="margin-left: 30px">Verification Required</span>
                                 </p>
+                                <p class="under-menu-heads" style="margin-left: 30px;position: relative;top: -5px">Verification Required</p>
+
                             </div>
                             <div class="col-5">
 
-                                <p> <i class="fas fa-moon my-icons-setts" style="color: lightgreen;transform: rotate(220deg)"></i>67% <br>
-                                    <span class="under-menu-heads" style="margin-left: 25px">Published</span>
+                                <p style="padding-top:10px ;margin-bottom: 0;font-size: 18px;font-weight: bold"> <i class="fas fa-moon my-icons-setts" style="color: lightgreen;transform: rotate(220deg)"></i>67% <br>
                                 </p>
+                                <p class="under-menu-heads" style="margin-left: 25px;position: relative;top: -5px">Published</p>
                             </div>
                         </div>
                     </div>
@@ -369,94 +358,155 @@
                     </div>
                 </div>
 <!--               Data Main-->
-                <div class="col-12 row mr-3 ml-3">
-                    <div class="col-12 row p-0 pb-2" style="border-bottom: 1px solid #a9aaaf;color: #a9aaaf">
-                        <div class="col-4 p-0 pt-1 pb-1">Business <i class="fas fa-sort-down data-main-icons"></i></div>
-                        <div class="col-2 p-0 pt-1 pb-1">Status Modified <i class="fas fa-sort-down data-main-icons"></i></div>
-                        <div class="col-6 p-0 pt-1 pb-1">Stats <i class="fas fa-sort-down data-main-icons"></i></div>
-                    </div>
-<!--                    Each Row inside - Data Main -->
-                <div class="col-12 row mt-1 mb-1 data-row-setts justify-content-center">
-<!--                    -->
-                    <div class="col-4 p-0 row">
-                        <div class="col-4 p-0">
-<!--                            Image Div-->
-                            <img src="starbucks_logo.gif" class="data-row-image">
+                <div class="col-12 row">
+                    <div class="col-12 pb-2">
+                        <div class="col-12 p-0 border-class">
+                            <div  style="width: 320px;display: inline-block">Business <i class="fas fa-sort-down data-main-icons"></i></div>
+                            <div  style="width: 177px;display: inline-block">Status Modified <i class="fas fa-sort-down data-main-icons"></i></div>
+                            <div style="width: auto;display: inline-block">Stats <i class="fas fa-sort-down data-main-icons"></i></div>
                         </div>
-                        <div class="col-8 row" style="align-content: center">
-                            <h6 style="margin-bottom: 0">Starbucks Coffee</h6>
-                            <p>
-                            Coffee and Tea
-                            </p>
-<!--                            <p>-->
-<!--                                Coffee and Tea-->
-<!--                            </p>-->
-<!--                            <div class="col-12"></div>-->
-<!--                            <div class="col-12"></div>-->
                         </div>
-                    </div>
-<!--                  Stats  -->
-                <div class="col-2 row justify-content-center">
-                        <div class="col-12 row justify-content-center">
-                            <div class="col-8 center-icon red-unchecked p-0" align="center">Drafted</div>
-                        </div>
-                        <div class="col-12 center-date">13/6/2019 8:23PM</div>
-                </div>
-<!--                   Stats- Menu Stars and Stuff -->
-                    <div class="col-6 row pr-0">
-                        <div class="col-12 row">
-                            <div class="col-3" style="font-size: 10px">
-<!--                                Stars-->
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star star-color"></i>
-                                <i class="fas fa-star star-color"></i>
+                    <ul class="col-12 p-0" id="list-items">
+<!--                        List of Data Items-->
+                        <li>
+                            <div class="list-item-image"><img src="starbucks_logo.gif" class="data-row-image"> </div>
+                            <div class="list-item-text-heading">
+                                <h5>StarBucks Coffee</h5>
+                                <p>Coffee and Tea</p>
                             </div>
-                            <div class="col-4 row">
-<!--                                Views Up-->
-                              198K
-                                <div class="green-checked small-text-stats">81% <i class="fas fa-arrow-up small-text-stats-icon"></i></div>
+                            <div class="status">
+                                <div><span class="status-icon">Draft</span></div>
+                                <p>date time</p>
                             </div>
-                            <div class="col-4 row">
-<!--                                Views Down-->
-                                640
-                                <div class="red-unchecked small-text-stats">41% <i class="fas fa-arrow-up small-text-stats-icon"></i></div>
+                            <div class="list-item-stats">
+                                <div class="stats-stars">
+                                    <p>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                        <i class="fas fa-star star-color"></i>
+                                    </p>
+                                    <p>
+                                        101 reviews
+                                    </p>
 
+                                </div>
+                                <div class="stats-views">
+                                    <p>
+                                        <span class="stats-view-heading">198K</span>
+                                        <span class="stats-view-green green-checked small-text-stats">81% <i class="fas fa-arrow-up small-text-stats-icon"></i></span>
+                                    </p>
+                                    <p>
+                                        Total Views
+                                    </p>
+                                </div>
+                                <div class="stats-total-action">
+                                    <p>
+                                        <span class="stats-view-heading">198K</span>
+                                        <span class="stats-view-green red-unchecked small-text-stats">81% <i class="fas fa-arrow-up small-text-stats-icon"></i></span>
+                                    </p>
+                                    <p>
+                                        Total Action
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-1" align="right">
+                            <div class="list-item-menu">
                                 <i onclick="displayMenu()" class="fas fa-ellipsis-h"></i>
+<!--                                <div class="mydropdown-menu" id="dropdown-menu">-->
+<!--                                                            <ul class="dropdown-list">-->
+<!--                                                                <li>Photos/Videos</li>-->
+<!--                                                                <li>Products</li>-->
+<!--                                                                <li>Services</li>-->
+<!--                                                                <li>Coupons</li>-->
+<!--                                                                <li>User Review</li>-->
+<!--                                                            </ul>-->
+<!--                            </div>-->
                             </div>
-                        </div>
-                        <div class="col-12 row" style="font-size: 12px">
-                            <div class="col-3">
-                                <!--                                Stars-->
-                               101 Reviews
-                            </div>
-                            <div class="col-4 row">
-                                <!--                                Views Up-->
-                                Total Views
+                        </li>
+                    </ul>
+<!--                    Each Row inside - Data Main -->
+<!--                <div class="col-12 row mt-1 mb-1 data-row-setts justify-content-center">-->
+<!--&lt;!&ndash;                    &ndash;&gt;-->
+<!--                    <div class="col-4 p-0 row">-->
+<!--                        <div class="col-4 p-0">-->
+<!--&lt;!&ndash;                            Image Div&ndash;&gt;-->
 
-                            </div>
-                            <div class="col-4 p-0">
-                                <!--                                Views Down-->
-                                Total Action
-                            </div>
-                            <div class="col-1" align="right">
-                            </div>
-                    </div>
-                </div>
-<!--                    Dropdown menu-->
-                    <div class="dropdown-menu" id="dropdown-menu">
-                        <ul class="dropdown-list">
-                            <li>Photos/Videos</li>
-                            <li>Products</li>
-                            <li>Services</li>
-                            <li>Coupons</li>
-                            <li>User Review</li>
-                        </ul>
-                    </div>
-                </div>
+<!--                        </div>-->
+<!--                        <div class="col-8 row" style="align-content: center">-->
+<!--                            <h6 style="margin-bottom: 0">Starbucks Coffee</h6>-->
+<!--                            <p>-->
+<!--                            Coffee and Tea-->
+<!--                            </p>-->
+<!--&lt;!&ndash;                            <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                Coffee and Tea&ndash;&gt;-->
+<!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="col-12"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="col-12"></div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--&lt;!&ndash;                  Stats  &ndash;&gt;-->
+<!--                <div class="col-2 row justify-content-center">-->
+<!--                        <div class="col-12 row justify-content-center">-->
+<!--                            <div class="col-8 center-icon red-unchecked p-0" align="center">Drafted</div>-->
+<!--                        </div>-->
+<!--                        <div class="col-12 center-date">13/6/2019 8:23PM</div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                   Stats- Menu Stars and Stuff &ndash;&gt;-->
+<!--                    <div class="col-6 row pr-0">-->
+<!--                        <div class="col-12 row">-->
+<!--                            <div class="col-3" style="font-size: 10px">-->
+<!--&lt;!&ndash;                                Stars&ndash;&gt;-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star star-color"></i>-->
+<!--                                <i class="fas fa-star star-color"></i>-->
+<!--                            </div>-->
+<!--                            <div class="col-4 row">-->
+<!--&lt;!&ndash;                                Views Up&ndash;&gt;-->
+<!--                              198K-->
+<!--                                <div class="green-checked small-text-stats">81% <i class="fas fa-arrow-up small-text-stats-icon"></i></div>-->
+<!--                            </div>-->
+<!--                            <div class="col-4 row">-->
+<!--&lt;!&ndash;                                Views Down&ndash;&gt;-->
+<!--                                640-->
+<!--                                <div class="red-unchecked small-text-stats">41% <i class="fas fa-arrow-up small-text-stats-icon"></i></div>-->
+
+<!--                            </div>-->
+<!--                            <div class="col-1" align="right">-->
+<!--                                <i onclick="displayMenu()" class="fas fa-ellipsis-h"></i>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-12 row" style="font-size: 12px">-->
+<!--                            <div class="col-3">-->
+<!--                                &lt;!&ndash;                                Stars&ndash;&gt;-->
+<!--                               101 Reviews-->
+<!--                            </div>-->
+<!--                            <div class="col-4 row">-->
+<!--                                &lt;!&ndash;                                Views Up&ndash;&gt;-->
+<!--                                Total Views-->
+
+<!--                            </div>-->
+<!--                            <div class="col-4 p-0">-->
+<!--                                &lt;!&ndash;                                Views Down&ndash;&gt;-->
+<!--                                Total Action-->
+<!--                            </div>-->
+<!--                            <div class="col-1" align="right">-->
+<!--                            </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--&lt;!&ndash;                    Dropdown menu&ndash;&gt;-->
+<!--                    <div class="dropdown-menu" id="dropdown-menu">-->
+<!--                        <ul class="dropdown-list">-->
+<!--                            <li>Photos/Videos</li>-->
+<!--                            <li>Products</li>-->
+<!--                            <li>Services</li>-->
+<!--                            <li>Coupons</li>-->
+<!--                            <li>User Review</li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
 <!--                    EnD of Row-->
             </div>
         </div>

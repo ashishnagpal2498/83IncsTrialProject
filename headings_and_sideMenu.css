@@ -4,9 +4,17 @@
     height: 100%;
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
 }
-#sideMenuIconList li{
-    padding: 15px 0;
-    font-size: 20px;
+#side-menu-div{
+
+}
+#sideMenuIconList{
+    border: 0;
+}
+#sideMenuIconList li a{
+    padding: 12px 0 12px 15px ;
+    font-size: 25px;
+    margin-left: 3px;
+    background-color: transparent;
 }
 a{
     text-decoration: none;
@@ -18,6 +26,13 @@ a:hover{
 #sideMenuIconList .nav-item .nav-link.active{
     color: #2d48c5;
 }
+#sideMenuIconList .nav-item .nav-link{
+    border: 0;
+
+    /*margin: 0 35px 0 0;*/
+}
+
+
 #side-menu-main-list .nav-item .nav-link.active{
     color: white;background-color: #2d48c5;
 
@@ -29,6 +44,27 @@ a:hover{
 #side-menu-main-list a:hover{
     text-decoration: none;
 }
+#side-menu-main-list .nav-item .nav-link{
+    background-color: #ebedf9;
+    border: 0;
+}
+
+/*Side Menu special List*/
+.side-menu-special-list{
+    margin-top: 35px;
+    flex: 0 0 83%;
+    max-width: 83%;
+}
+.side-menu-heading{
+    font-size: 13px;
+    padding-left: 0;
+}
+.data-main-icons{
+    position: relative;
+    top: -2px;
+}
+
+
 /*List Nav-*/
 .nav-bar-setts a{
     text-decoration: none;

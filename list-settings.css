@@ -1,0 +1,96 @@
+#list-items li div{
+    box-sizing: border-box;
+    display: inline-block;
+}
+#list-items li{
+    width: 100%;
+    list-style-type: none;
+    padding: 10px 15px;
+}
+.list-item-image{
+    width: 10%;
+    display: inline-block;
+}
+.list-item-text-heading{
+    width: 24%;
+
+}
+.list-item-text-heading h5{
+    margin: 2px 0;
+}
+.list-item-text-heading p{
+    font-size: 12px;
+}
+.status-icon{
+    display: block;
+    font-size: 12px;
+    width: 40px;
+    color: red;
+    border: 1px solid red;
+    padding: 0 4px;
+    border-radius: 10px;
+
+}
+.status{
+    align-content: center;
+    width: 18%;
+}
+.list-item-stats{
+
+    width: 32%;
+}
+.list-item-stats p{
+    padding: 0 5px;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.list-item-menu{
+    text-align: right;
+    width: 11%;
+}
+
+/*Icons*/
+.notification-icon{
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 200px;
+    height: 100px;
+}
+.question-mark-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 2px;
+    text-align: center;
+}
+.user-noti-icon{
+    position: absolute;
+    width: 50px;
+    bottom: 10px;
+    height: 50px;
+    padding-bottom:10px ;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 100px;
+    text-align: center;
+}
+.noti-bell{
+    position: absolute;
+    right: -8px;
+    top: 0;
+    text-align: center;
+    font-size: 10px;
+    padding: 2px;
+    background-color: red;
+    color: white;
+
+    border-radius: 100px;
+    width: 17px;
+    height: 17px;
+}
