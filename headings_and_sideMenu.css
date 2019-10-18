@@ -1,0 +1,51 @@
+.side-menu{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+#sideMenuIconList li{
+    padding: 15px 0;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: #a9aaaf;
+}
+a:hover{
+    text-decoration: none;
+}
+#sideMenuIconList .nav-item .nav-link.active{
+    color: #2d48c5;
+}
+#side-menu-main-list .nav-item .nav-link.active{
+    color: white;background-color: #2d48c5;
+
+}
+#side-menu-main-list a{
+    text-decoration: none;
+    color: #a9aaaf;
+}
+#side-menu-main-list a:hover{
+    text-decoration: none;
+}
+/*List Nav-*/
+.nav-bar-setts a{
+    text-decoration: none;
+    color: #a9aaaf;
+}
+.nav-bar-setts a:hover{
+    text-decoration: none;
+}
+.nav-bar-setts .nav-item .nav-link{
+    border: 0;
+    padding: 8px 0;
+    margin: 0 35px 0 0;
+}
+
+.nav-bar-setts .nav-item .nav-link.active{
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #4a61cd;
+    font-weight: bold;
+}
